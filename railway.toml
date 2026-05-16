@@ -1,0 +1,16 @@
+[build]
+# Build from backend subdirectory
+dockerfilePath = "backend/Dockerfile"
+buildCommand = ""
+
+[deploy]
+healthcheckPath = "/api/status"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+# Required env vars (set in Railway dashboard):
+#   ANTHROPIC_API_KEY   — Claude AI
+#   DATABASE_URL        — override for persistent DB, e.g.
+#                         sqlite+aiosqlite:////data/trading.db (with volume)
+#                         or a PostgreSQL URL
