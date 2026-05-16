@@ -1,6 +1,4 @@
 [build]
-# Use backend/ as the build context — COPY paths in Dockerfile are relative to it
-rootDirectory = "backend"
 dockerfilePath = "Dockerfile"
 
 [deploy]
